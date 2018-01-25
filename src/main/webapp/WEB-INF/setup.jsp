@@ -14,19 +14,17 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 --%>
-<%@ page import=" org.superbiz.moviefun.Movie" %>
-<%@ page import="org.superbiz.moviefun.MoviesBean" %>
-<%@ page import="javax.naming.InitialContext" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.List" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/setup.jsp
 <%
   InitialContext initialContext = new InitialContext();
 
 
 %>
+=======
+>>>>>>> HEAD@{1}:src/main/webapp/WEB-INF/setup.jsp
 <c:set var="language" value="${pageContext.request.locale}"/>
 <fmt:setLocale value="${language}"/>
 
@@ -40,15 +38,15 @@
   <meta name="author" content="">
 
   <!-- Le styles -->
-  <link href="assets/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/movie.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/movie.css" rel="stylesheet">
   <style>
     body {
       padding-top: 60px;
       /* 60px to make the container go all the way to the bottom of the topbar */
     }
   </style>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
 </head>
 
@@ -77,6 +75,7 @@
       <td><b>Director</b></td>
       <td><b>Genre</b></td>
     </tr>
+<<<<<<< HEAD:src/main/webapp/WEB-INF/setup.jsp
 
    <c:forEach items="${requestScope.movies}" var="movie">
      <tr>
@@ -86,9 +85,36 @@
      </tr>
    </c:forEach>
 
+=======
+    <c:forEach items="${requestScope.movies}" var="movie">
+      <tr>
+        <td>${ movie.title }</td>
+        <td>${ movie.director }</td>
+        <td>${ movie.genre }</td>
+      </tr>
+    </c:forEach>
+>>>>>>> HEAD@{1}:src/main/webapp/WEB-INF/setup.jsp
   </table>
 
-  <h2>Continue</h2>
+    <h2>Seeded Database with the Following albums</h2>
+    <table width="500">
+        <tr>
+            <td><b>Title</b></td>
+            <td><b>Artist</b></td>
+            <td><b>Year</b></td>
+        </tr>
+
+        <c:forEach items="${requestScope.albums}" var="album">
+            <tr>
+                <td> ${album.title} </td>
+                <td> ${album.artist} </td>
+                <td> ${album.year} </td>
+            </tr>
+        </c:forEach>
+    </table>
+
+
+    <h2>Continue</h2>
   <a href="moviefun">Go to main app</a>
 </div>
 <!-- /container -->

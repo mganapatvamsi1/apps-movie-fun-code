@@ -1,10 +1,27 @@
+<<<<<<< HEAD
+=======
+moviefun:
+  datasources:
+    movies:
+      url: jdbc:mysql://localhost:3306/movies?useSSL=false
+      username: root
+      password:
+    albums:
+      url: jdbc:mysql://localhost:3306/albums?useSSL=false
+      username: root
+      password:
+>>>>>>> HEAD@{1}
 spring:
   mvc.view:
     prefix: /WEB-INF/
     suffix: .jsp
+<<<<<<< HEAD
   jpa:
     generate-ddl: true
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
     url: jdbc:mysql://localhost:3306/movies?useSSL=false
     username: root
+=======
+
+>>>>>>> HEAD@{1}
