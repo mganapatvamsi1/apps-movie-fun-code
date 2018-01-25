@@ -20,13 +20,7 @@ import org.hibernate.boot.jaxb.SourceType;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-<<<<<<< HEAD:src/main/java/org/superbiz/moviefun/MoviesBean.java
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.ejb.Stateless;
-=======
->>>>>>> HEAD@{1}:src/main/java/org/superbiz/moviefun/movies/MoviesBean.java
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
@@ -37,11 +31,8 @@ import java.util.List;
 @Repository
 public class MoviesBean {
 
-<<<<<<< HEAD:src/main/java/org/superbiz/moviefun/MoviesBean.java
-    @PersistenceContext()
-=======
+
     @PersistenceContext(unitName = "moviesPU")
->>>>>>> HEAD@{1}:src/main/java/org/superbiz/moviefun/movies/MoviesBean.java
     private EntityManager entityManager;
 
     public Movie find(Long id) {

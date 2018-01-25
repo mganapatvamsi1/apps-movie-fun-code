@@ -18,14 +18,10 @@ package org.superbiz.moviefun;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
-<<<<<<< HEAD
-=======
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.superbiz.moviefun.movies.Movie;
 import org.superbiz.moviefun.movies.MoviesBean;
->>>>>>> HEAD@{1}
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
