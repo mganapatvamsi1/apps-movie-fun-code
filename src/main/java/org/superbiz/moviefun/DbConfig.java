@@ -85,7 +85,8 @@ public class DbConfig {
     public PlatformTransactionManager albumsTransactionManager(
             @Qualifier("getAlbumsFactory")
                     LocalContainerEntityManagerFactoryBean factoryBean) {
-        return new JpaTransactionManager(factoryBean.getNativeEntityManagerFactory());
+        return new JpaTransactionManager(factoryBean.getObject());
+        // changed here from factoryBean.getNativeEntityManagerFactory() to factoryBean.getObject()
     }
 
     @Bean
